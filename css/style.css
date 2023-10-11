@@ -2,9 +2,9 @@
 
 :root{
     --navbar-color: #0F0F0F;
-    --primary-color: #073227;
+    --primary-color: #067c5e;
     --secondary-color: #003e81;
-    --light-color-primary: #008136;
+    --light-color-primary: #02150a;
     --padding-color:#242323;
     --footer-color: #0F0F0F;
     --highlight-color: rgba(15, 237, 93, 0.9);
@@ -70,7 +70,7 @@ p{
 }
 
 .container ul li:hover a {
-    color: var(--light-color-primary)
+    color: var(--highlight-color)
 }
 
 /* end of navbar */
@@ -113,12 +113,24 @@ p{
 /* Projects section */
 
 .projects{
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
     background-color: var(--padding-color);
     gap: .3rem;
+    position: relative;
+}
+
+#projects::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../images/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg') no-repeat center center/cover ;
+    opacity: 0.6;
 }
 
 .projects > div {
@@ -236,6 +248,19 @@ p{
     color: #fff;
     text-align: center;
     justify-content: space-between;
+    position: relative;
+}
+
+#about-me .container::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: url('../images/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -3;
 }
 
 #about-me .about-projects{
