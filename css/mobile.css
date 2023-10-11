@@ -1,0 +1,27 @@
+.showcase {
+    padding: 1rem;
+    text-align: center;
+}
+
+.projects {
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 1rem;
+}
+
+@media(max-width:600px){
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+#about-me .about-projects {
+    width: 80%;
+}
+
+#about-me .about-a{
+    width: 80%;
+}
+
+#main-footer .container{
+    flex-direction: column;
+}
