@@ -159,6 +159,7 @@ p{
     background-color: var(--light-color-primary);
     color: #fff;
     border-radius: 5px;
+    border-top-right-radius: 0;
 }
 
 
@@ -193,6 +194,13 @@ p{
 .projects  div:hover{
     background-color: var(--primary-color);
 }
+
+/* Projects with are marked done */
+
+.projects div .content .done{
+    background-color: var(--primary-color);
+}
+
 
 /* utilty */
  .bg-primary{
@@ -237,6 +245,45 @@ p{
     background-color: var(--primary-color);
     color: #fff;
 }
+
+
+/* Progress Bar */
+#progress {
+    margin: 1rem;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* padding: 1rem; */
+}
+
+#progress::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1rem;
+    border: #fff 2px solid;
+    border-radius: 10px;
+}
+
+#progress .progress-bar{
+    width: 0%;
+    background-color: var(--highlight-color);
+    height: 1rem;
+    position: absolute;
+    top:2px;
+    border-radius: 10px;
+    left: 0;
+    transition: all .4s ease-in;
+}
+
+#progress .currentProg{
+    margin-top: 2rem;
+}
+
 
 
 /* About me sections */
